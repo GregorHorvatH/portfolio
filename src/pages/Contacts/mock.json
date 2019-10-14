@@ -1,0 +1,195 @@
+{
+  "results": [
+    {
+      "gender": "male",
+      "name": {
+        "title": "mr",
+        "first": "tom",
+        "last": "romero"
+      },
+      "location": {
+        "street": "7294 fairview st",
+        "city": "shepparton",
+        "state": "tasmania",
+        "postcode": 8436
+      },
+      "email": "tom.romero@example.com",
+      "login": {
+        "username": "silverleopard849",
+        "password": "brown1",
+        "salt": "EWRokTOs",
+        "md5": "73ad9eb444fe133b01dd7996728ab32a",
+        "sha1": "3fdf959de35605c70aac4656b94649d848076b45",
+        "sha256": "e5ff241e3325e97253588d4a4d60f7b5f0f032eca7fc416f2fd16159b651a501"
+      },
+      "dob": "1984-09-20 11:58:44",
+      "registered": "2003-02-02 03:51:35",
+      "phone": "06-6266-4755",
+      "cell": "0417-640-796",
+      "id": {
+        "name": "TFN",
+        "value": "883884468"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/23.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/23.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/23.jpg"
+      },
+      "nat": "AU"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "ms",
+        "first": "rosemary",
+        "last": "howard"
+      },
+      "location": {
+        "street": "6686 groveland terrace",
+        "city": "perth",
+        "state": "south australia",
+        "postcode": 6114
+      },
+      "email": "rosemary.howard@example.com",
+      "login": {
+        "username": "lazylion210",
+        "password": "joung",
+        "salt": "XonycRVo",
+        "md5": "22c9fcc4a86ded55905a2ff703adf600",
+        "sha1": "1b2893b8817c6891d7d15f52b073222b2aa37298",
+        "sha256": "ee1e46dc6217c4afe7b87c81aa5e6487f6eb7b731155aaae3b1ffbc5f0bae080"
+      },
+      "dob": "1966-09-30 10:07:21",
+      "registered": "2008-04-27 23:25:23",
+      "phone": "01-9285-5538",
+      "cell": "0495-659-674",
+      "id": {
+        "name": "TFN",
+        "value": "138745625"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/87.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/87.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/87.jpg"
+      },
+      "nat": "AU"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "mrs",
+        "first": "toni",
+        "last": "knight"
+      },
+      "location": {
+        "street": "1696 northaven rd",
+        "city": "nowra",
+        "state": "queensland",
+        "postcode": 523
+      },
+      "email": "toni.knight@example.com",
+      "login": {
+        "username": "brownelephant415",
+        "password": "empire",
+        "salt": "QfjYzOlW",
+        "md5": "3099dfa5b0ee7d4278afbb8ef3bada2c",
+        "sha1": "64e8664eb62985ffa090e258db9e95b5e88778dc",
+        "sha256": "2d0dd143cb7aae80bdd78aeb9c5e2dc906cde4fa940a78798cb56e871019f607"
+      },
+      "dob": "1966-05-28 10:00:57",
+      "registered": "2002-10-31 23:51:01",
+      "phone": "07-7387-4787",
+      "cell": "0497-724-002",
+      "id": {
+        "name": "TFN",
+        "value": "751056819"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/36.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/36.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/36.jpg"
+      },
+      "nat": "AU"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "mr",
+        "first": "douglas",
+        "last": "armstrong"
+      },
+      "location": {
+        "street": "4797 northaven rd",
+        "city": "rockhampton",
+        "state": "south australia",
+        "postcode": 4944
+      },
+      "email": "douglas.armstrong@example.com",
+      "login": {
+        "username": "orangewolf282",
+        "password": "astro",
+        "salt": "hzPoY4EJ",
+        "md5": "d9cbbcca9895fc00cbe4483b03ddd8b5",
+        "sha1": "8d6a2b1b6fc51feb10298f7aeafebfe6a590806a",
+        "sha256": "4bdbac97d92ba69ec2a21bd61cce228cbd470e9da44e7ee0916541fbc08cde6d"
+      },
+      "dob": "1993-04-18 11:35:01",
+      "registered": "2003-08-03 10:14:01",
+      "phone": "08-0097-4011",
+      "cell": "0401-439-254",
+      "id": {
+        "name": "TFN",
+        "value": "699923319"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/99.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/99.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/99.jpg"
+      },
+      "nat": "AU"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "mr",
+        "first": "shawn",
+        "last": "pena"
+      },
+      "location": {
+        "street": "5282 preston rd",
+        "city": "coffs harbour",
+        "state": "new south wales",
+        "postcode": 9577
+      },
+      "email": "shawn.pena@example.com",
+      "login": {
+        "username": "blueswan251",
+        "password": "mellow",
+        "salt": "g8YBTjYj",
+        "md5": "7250ee04f70a9ad5906956eb3025fca7",
+        "sha1": "4ff318554442036ee138740d26b83678e85a0111",
+        "sha256": "77881e68b3bed45157f4c712008b4821655f1d6d860def969dc463ce2a4114b7"
+      },
+      "dob": "1955-03-29 11:50:39",
+      "registered": "2009-11-13 20:49:04",
+      "phone": "02-8033-8909",
+      "cell": "0459-136-806",
+      "id": {
+        "name": "TFN",
+        "value": "124270765"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/30.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/30.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/30.jpg"
+      },
+      "nat": "AU"
+    }
+  ],
+  "info": {
+    "seed": "Incuber",
+    "results": 5,
+    "page": 1,
+    "version": "1.1"
+  }
+}

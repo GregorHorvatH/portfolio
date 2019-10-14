@@ -1,0 +1,18 @@
+.weatherinputwrapper {
+  justify-content: center;
+
+  .weatherinput {
+    max-width: 500px;
+  }
+
+  .searchButton {
+    z-index: initial;
+  }
+}
+
+.weatherNoCities {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10em;
+}

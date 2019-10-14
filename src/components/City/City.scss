@@ -1,0 +1,21 @@
+.weather-city {
+  position: relative;
+
+  .weather-header {
+    padding-right: 25px;
+    overflow-wrap: break-word;
+  }
+
+  .weather-close {
+    position: absolute;
+    padding: 0;
+    right: 15px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .weather-temperature {
+    display    : flex;
+    align-items: center;
+  }
+}
