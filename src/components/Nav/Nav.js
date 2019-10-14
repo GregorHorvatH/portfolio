@@ -5,14 +5,10 @@ import { Link } from 'react-router-dom';
 // menu items
 import menuItems from '../Menu/menu-items.json';
 
-// TODO: refactor this template code to React Router DOM
-// https://www.npmjs.com/package/react-router-dom
-
-//TODO: fix <a href="/">Home </a> to <Link ... />
 const Nav = () => (
   <nav>
     <ul className="box-primary-nav">
-      <li className="box-label">About me</li>
+      <li className="box-label">Gergely Horvath's Portfolio</li>
       <li>
         <a href="/">Home </a>
         <i className="ion-ios-circle-filled color" />
