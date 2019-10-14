@@ -11,6 +11,7 @@ import Intro from '../Intro';
 import Portfolio from '../../components/Portfolio';
 import Weather from '../../pages/Weather';
 import Contacts from '../../pages/Contacts';
+import Currency from '../../pages/Currency';
 import MachineLearning from '../../pages/MachineLearning';
 
 const Switcher = () => (
@@ -23,6 +24,9 @@ const Switcher = () => (
     </Route>
     <Route path="/contacts">
       <Contacts />
+    </Route>
+    <Route path="/currency">
+      <Currency />
     </Route>
     <Route path="/machine-learning">
       <MachineLearning />

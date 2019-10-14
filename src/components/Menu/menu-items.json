@@ -12,6 +12,12 @@
     "image": "./images/contacts.png"
   },
   {
+    "name": "currency",
+    "label": "Currency Exchange",
+    "technologies": "JavaScript / React+Redux",
+    "image": "./images/currency.png"
+  },
+  {
     "name": "machine-learning",
     "label": "Machine Learning",
     "technologies": "JavaScript / Brain JS",
