@@ -28,15 +28,15 @@ const sortCurrencies = (values) => values.sort((a, b) => {
 });
 
 const deduplicateCurrencies = (values) => {
-  const deduplicated = [];
+  const unique = [];
 
   values.forEach(value => {
-    if (!deduplicated.find(item => item.ccy === value.ccy && item.base_ccy === value.base_ccy)) {
-      deduplicated.push(value);
+    if (!unique.find(item => item.ccy === value.ccy && item.base_ccy === value.base_ccy)) {
+      unique.push(value);
     }
   });
 
-  return deduplicated;
+  return unique;
 };
 
 const Currency = () => {

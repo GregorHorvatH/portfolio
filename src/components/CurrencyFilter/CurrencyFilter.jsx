@@ -2,15 +2,10 @@
 import React from 'react';
 
 const deduplicate = (values = []) => {
-  const deduplicated = [];
+  const set = new Set();
+  values.forEach(ccy => set.add(ccy));
 
-  values.forEach(value => {
-    if (!deduplicated.find(item => item === value)) {
-      deduplicated.push(value);
-    }
-  });
-
-  return deduplicated;
+  return Array.from(set);
 };
 
 const CurrencyFilter = ({ currencies = [], onChange, filter, disabled }) => {
