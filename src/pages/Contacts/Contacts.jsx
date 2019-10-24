@@ -66,11 +66,9 @@ const Contacts = () => {
 
         disabled={isLoading}
       />
-      {
-        isLoading
-          ? <Loader />
-          : <Users users={users} />
-      }
+      <Loader isLoading={isLoading}>
+        <Users users={users} />
+      </Loader>
       <Pagination pageCount={pages} initialPage={activePage} onPageChange={handlePageChange} />
     </div>
   );

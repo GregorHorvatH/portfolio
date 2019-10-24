@@ -86,11 +86,9 @@ const Currency = () => {
         filter={filter}
         disabled={isLoading}
       />
-      {
-        isLoading
-          ? <Loader />
-          : <Currencies currencies={currencies} filter={filter} />
-      }
+      <Loader isLoading={isLoading}>
+        <Currencies currencies={currencies} filter={filter} />
+      </Loader>
     </div>
   );
 };

@@ -114,24 +114,20 @@ class Weather extends Component {
                     width={100}
                   />
                   :
-                  <form className={styles.form}>
+                  <form className={styles.form} onSubmit={this.handleSubmit}>
                     <input
                       type="text"
                       className={["form-control", styles.weatherinput].join(' ')}
                       placeholder="Enter City"
                       aria-label="Recipient's username"
-                      aria-describedby="button-addon2"
                       value={cityName}
                       onChange={this.handleChangeCityName}
-                      // onKeyPress={this.handleEnterPress}
                       ref={input => this.textInput = input}
                     />
                     <div className="input-group-append">
                       <button
                         className={["btn btn-light", styles.searchButton].join(' ')}
-                        type="submit"
-                        id="button-addon2"
-                        onClick={this.handleSubmit}>Search</button>
+                        type="submit">Search</button>
                     </div>
                   </form>
               }
