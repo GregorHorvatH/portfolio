@@ -1,5 +1,5 @@
 // core
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Loader from 'react-loader-spinner';
 
 // components
@@ -84,9 +84,12 @@ class Weather extends Component {
     this.setState({ cityName: target.value });
   }
 
-  handleEnterPress = ({ key }) => {
-    if (key === "Enter") {
-      this.addCity();
+  handleSubmit = (e) => {
+    const { cityName } = this.state;
+
+    e.preventDefault();
+    if (cityName) {
+      this.addCity(cityName);
     }
   }
 
@@ -111,7 +114,7 @@ class Weather extends Component {
                     width={100}
                   />
                   :
-                  <Fragment>
+                  <form className={styles.form}>
                     <input
                       type="text"
                       className={["form-control", styles.weatherinput].join(' ')}
@@ -120,17 +123,17 @@ class Weather extends Component {
                       aria-describedby="button-addon2"
                       value={cityName}
                       onChange={this.handleChangeCityName}
-                      onKeyPress={this.handleEnterPress}
+                      // onKeyPress={this.handleEnterPress}
                       ref={input => this.textInput = input}
                     />
                     <div className="input-group-append">
                       <button
                         className={["btn btn-light", styles.searchButton].join(' ')}
-                        type="button"
+                        type="submit"
                         id="button-addon2"
-                        onClick={this.addCity}>Search</button>
+                        onClick={this.handleSubmit}>Search</button>
                     </div>
-                  </Fragment>
+                  </form>
               }
             </div>
             {
