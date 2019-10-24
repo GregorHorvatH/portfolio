@@ -25,6 +25,17 @@ class Weather extends Component {
   componentDidMount() {
     this.textInput.focus();
     this.loadStoredCities();
+
+    this.cancelRefresh = setInterval(this.refreshData, 300000); // once in 5 minute
+  }
+
+  componentWillUnmount() {
+    this.cancelRefresh();
+  }
+
+  refreshData = async () => {
+    await this.setState({ cities: [] });
+    await this.loadStoredCities();
   }
 
   loadStoredCities = () => {
@@ -119,7 +130,6 @@ class Weather extends Component {
                       type="text"
                       className={["form-control", styles.weatherinput].join(' ')}
                       placeholder="Enter City"
-                      aria-label="Recipient's username"
                       value={cityName}
                       onChange={this.handleChangeCityName}
                       ref={input => this.textInput = input}
