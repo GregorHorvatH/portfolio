@@ -2,12 +2,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { faSignInAlt, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import classnames from 'classnames';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import classnames from 'classnames';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faGooglePlusG } from '@fortawesome/free-brands-svg-icons';
-import { faSignInAlt, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 // actions
 import actions from '../../pages/Chat/store/actions';
@@ -25,33 +27,36 @@ class Login extends Component {
     return (
       <Row className="justify-content-sm-center">
         <Col xs={12} sm={10} md={8} lg={6} className={styles.logregForm}>
-          <form className={styles.form}>
+          <Form className={styles.form} validated={true} noValidate>
             <h3> Sign in</h3>
             <div className={styles.socialLogin}>
-              <button className={classnames("btn", styles.facebookBtn, styles.socialBtn)} type="button">
+              <Button className={classnames("btn", styles.facebookBtn, styles.socialBtn)} type="button">
                 <span><FontAwesomeIcon icon={faFacebookF} /> Sign in with Facebook</span>
-              </button>
-              <button className={classnames("btn", styles.googleBtn, styles.socialBtn)} type="button">
-                <span><FontAwesomeIcon icon={faGooglePlusG} /> Sign in with Google+</span>
-              </button>
+              </Button>
+              <Button className={classnames("btn", styles.googleBtn, styles.socialBtn)} type="button">
+                <span><FontAwesomeIcon icon={faGoogle} /> Sign in with Google</span>
+              </Button>
             </div>
 
             <p>OR</p>
 
-            <input type="email" className="form-control" placeholder="Email address" required="" autoFocus="" />
-            <input type="password" className="form-control" placeholder="Password" required="" />
+            <Form.Control type="email" className="form-control" placeholder="Email address" required autoFocus />
+            <Form.Control.Feedback type="invalid">Please enter email</Form.Control.Feedback>
 
-            <button className="btn btn-success btn-block" type="submit" onClick={this._handleSubmit}>
+            <Form.Control type="password" className={classnames("form-control", styles.password)} placeholder="Password" required />
+            <Form.Control.Feedback type="invalid">Please enter password</Form.Control.Feedback>
+
+            <Button className="btn btn-success btn-block" type="submit" onClick={this._handleSubmit}>
               <span><FontAwesomeIcon icon={faSignInAlt} /> Sign in</span>
-            </button>
+            </Button>
             <span className={styles.forgotBtn}>Forgot password?</span>
 
             <hr className={styles.delimiter} />
 
-            <button className="btn btn-primary btn-block" type="button">
+            <Button className="btn btn-primary btn-block" type="button">
               <span><FontAwesomeIcon icon={faUserPlus} /> Sign up New Account</span>
-            </button>
-          </form>
+            </Button>
+          </Form>
         </Col>
 
         {/* <form action="/reset/password/" className="form-reset">
@@ -98,3 +103,6 @@ const mapDispatch = (dispatch) => ({
 });
 
 export default connect(mapState, mapDispatch)(Login);
+
+
+// https://bootsnipp.com/snippets/GavAo
