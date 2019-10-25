@@ -1,0 +1,67 @@
+.logregForm {
+  background-color: #f3f3f3;
+  box-shadow      : 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition      : all 0.3s cubic-bezier(.25, .8, .25, 1);
+
+  button[type="submit"] {
+    margin-top: 10px;
+  }
+
+  .form {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    padding       : 15px;
+    margin        : auto;
+
+    .socialLogin {
+      display      : flex;
+      margin-bottom: 14px;
+      width        : 100%;
+
+      .socialBtn {
+        flex       : 1;
+        font-weight: 100;
+        color      : white;
+        width      : 190px;
+        font-size  : 0.9rem;
+        cursor     : pointer;
+      }
+
+      .facebookBtn {
+        background-color: #3C589C;
+        margin-right    : 3px;
+
+        &:hover {
+          background-color: #263865;
+        }
+      }
+
+      .googleBtn {
+        background-color: #DF4B3B;
+        margin-left     : 3px;
+
+        &:hover {
+          background-color: #75271f;
+        }
+      }
+    }
+
+    .forgotBtn {
+      padding-top: 10px;
+      color      : lightseagreen;
+      cursor     : pointer;
+      align-self : flex-start;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+  }
+
+}
+
+.delimiter {
+  width: 100%;
+}

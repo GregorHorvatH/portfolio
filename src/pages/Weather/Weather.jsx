@@ -26,11 +26,11 @@ class Weather extends Component {
     this.textInput.focus();
     this.loadStoredCities();
 
-    this.cancelRefresh = setInterval(this.refreshData, 300000); // once in 5 minute
+    this.refreshInterval = setInterval(this.refreshData, 300000); // once in 5 minute
   }
 
   componentWillUnmount() {
-    this.cancelRefresh();
+    clearInterval(this.refreshInterval);
   }
 
   refreshData = async () => {

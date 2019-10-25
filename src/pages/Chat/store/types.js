@@ -1,0 +1,5 @@
+export default Object.freeze({
+  CHAT_LOGIN: 'CHAT_LOGIN',
+  CHAT_LOGIN_SUCCESS: 'CHAT_LOGIN_SUCCESS',
+  CHAT_LOGIN_FAIL: 'CHAT_LOGIN_FAIL',
+});
