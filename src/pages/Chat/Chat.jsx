@@ -40,7 +40,9 @@ class Chat extends Component {
   }
 
   _initializeFirebase = () => {
-    firebase.initializeApp(firebaseConfig);
+    if (!firebase.apps.length) {
+      firebase.initializeApp(firebaseConfig);
+    }
 
     this._initializeFirebaseAuth();
   }
