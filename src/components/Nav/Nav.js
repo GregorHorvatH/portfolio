@@ -23,6 +23,15 @@ const Nav = () => (
         ))
       }
 
+      <li>
+        <Link to="/contacts">Contacts</Link>
+        <i className="ion-ios-circle-filled color" />
+      </li>
+      <li>
+        <Link to="/about">About</Link>
+        <i className="ion-ios-circle-filled color" />
+      </li>
+
       <li className="box-social">
         <a href="https://www.linkedin.com/in/gergely-horv%C3%A1th-a71850b6">
           <i className="ion-social-linkedin-outline"></i>

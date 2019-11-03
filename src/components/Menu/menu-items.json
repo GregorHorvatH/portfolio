@@ -1,15 +1,15 @@
 [
   {
+    "name": "contact-list",
+    "label": "Contact List",
+    "technologies": "JavaScript / React+Redux",
+    "image": "./images/contacts.png"
+  },
+  {
     "name": "weather",
     "label": "Weather Info",
     "technologies": "JavaScript / React",
     "image": "./images/weather.png"
-  },
-  {
-    "name": "contacts",
-    "label": "Contact List",
-    "technologies": "JavaScript / React+Redux",
-    "image": "./images/contacts.png"
   },
   {
     "name": "currency",
@@ -18,15 +18,15 @@
     "image": "./images/currency.png"
   },
   {
-    "name": "firebase-chat",
-    "label": "Firebase Chat",
-    "technologies": "JavaScript / React+Redux / Firebase",
-    "image": "./images/chat.png"
-  },
-  {
     "name": "machine-learning",
     "label": "Machine Learning",
     "technologies": "JavaScript / Brain JS",
     "image": ""
+  },
+  {
+    "name": "firebase-chat",
+    "label": "Firebase Chat",
+    "technologies": "JavaScript / React+Redux / Firebase",
+    "image": "./images/chat.png"
   }
 ]

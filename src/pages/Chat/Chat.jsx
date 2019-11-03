@@ -9,35 +9,36 @@ import styles from './Chat.module.scss';
 
 // components
 import Description from '../../components/Description';
-import Login from '../../components/Login';
+import Messages from '../../components/Messages';
+// import Login from '../../components/Login';
 
 // forms
-import SignInForm from '../../components/SignInForm';
-import ResetPasswordForm from '../../components/ResetPasswordForm';
-import SignUpForm from '../../components/SignUpForm';
+// import SignInForm from '../../components/SignInForm';
+// import ResetPasswordForm from '../../components/ResetPasswordForm';
+// import SignUpForm from '../../components/SignUpForm';
 
 // actions
 import actions from './store/actions';
 
-const forms = [
-  SignInForm,
-  ResetPasswordForm,
-  SignUpForm,
-];
+// const forms = [
+//   SignInForm,
+//   ResetPasswordForm,
+//   SignUpForm,
+// ];
 
-const formsOrder = {
-  signInForm: 0,
-  resetPasswordForm: 1,
-  signUpForm: 2,
-};
+// const formsOrder = {
+//   signInForm: 0,
+//   resetPasswordForm: 1,
+//   signUpForm: 2,
+// };
 
-const provider = {
-  emailAndPassword: 0,
-  createEmailAndPassword: 1,
-  resetPassword: 2,
-  facebook: 3,
-  google: 4,
-};
+// const provider = {
+//   emailAndPassword: 0,
+//   createEmailAndPassword: 1,
+//   resetPassword: 2,
+//   facebook: 3,
+//   google: 4,
+// };
 
 const DESCRIPTION = {
   title: 'Firebase Chat',
@@ -49,6 +50,10 @@ class Chat extends Component {
     currentForm: 0,
   }
 
+  componentDidMount() {
+    this.input.scrollIntoView(false);
+  }
+
   _handleSetForm = (currentForm) => this.setState({ currentForm })
 
   _handleSubmit = (provider, data) => {
@@ -57,7 +62,7 @@ class Chat extends Component {
   }
 
   render() {
-    const { currentForm } = this.state;
+    // const { currentForm } = this.state;
 
     return (
       <Container className={styles.chat} fluid>
@@ -65,14 +70,23 @@ class Chat extends Component {
           title={DESCRIPTION.title}
           details={DESCRIPTION.details}
         />
-        <Login
+        {/* <Login
           forms={forms}
           currentForm={currentForm}
           formsOrder={formsOrder}
           provider={provider}
           onChangeForm={this._handleSetForm}
           onSubmit={this._handleSubmit}
-        />
+        /> */}
+        <Messages />
+        <div className="row">
+          <div className="col">
+            <form className={styles.msgForm}>
+              <input className={styles.msgInput} type="text" autoFocus ref={ref => this.input = ref} />
+              <button className="btn btn-light" type="submit">Send message</button>
+            </form>
+          </div>
+        </div>
       </Container>
     );
   }

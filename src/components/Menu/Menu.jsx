@@ -1,6 +1,6 @@
 // core
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React, { Fragment } from 'react';
+import { Switch, Route } from "react-router-dom";
 
 // components
 import Header from '../Header';
@@ -10,10 +10,13 @@ import Nav from '../Nav';
 import Intro from '../Intro';
 import Portfolio from '../../components/Portfolio';
 import Weather from '../../pages/Weather';
-import Contacts from '../../pages/Contacts';
+import ContactList from '../../pages/ContactList';
 import Currency from '../../pages/Currency';
 import Chat from '../../pages/Chat';
 import MachineLearning from '../../pages/MachineLearning';
+
+import Contacts from '../../pages/Contacts';
+import About from '../../pages/About';
 
 const Switcher = () => (
   <Switch>
@@ -23,8 +26,8 @@ const Switcher = () => (
     <Route path="/weather">
       <Weather />
     </Route>
-    <Route path="/contacts">
-      <Contacts />
+    <Route path="/contact-list">
+      <ContactList />
     </Route>
     <Route path="/currency">
       <Currency />
@@ -35,16 +38,22 @@ const Switcher = () => (
     <Route path="/machine-learning">
       <MachineLearning />
     </Route>
+    <Route path="/contacts">
+      <Contacts />
+    </Route>
+    <Route path="/about">
+      <About />
+    </Route>
   </Switch>
 );
 
 const Menu = () => (
-  <Router>
+  <Fragment>
     <Header />
     <Nav />
     <Switcher />
     <Portfolio />
-  </Router>
+  </Fragment>
 );
 
 export default Menu;
