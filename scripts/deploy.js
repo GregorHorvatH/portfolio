@@ -1,7 +1,7 @@
 var FtpDeploy = require("ftp-deploy");
 var ftpDeploy = new FtpDeploy();
 
-var secret = require("../secret/deployConfig");
+var secret = require("../src/secret/deployConfig");
 
 var config = {
   user: secret.user,

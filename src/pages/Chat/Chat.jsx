@@ -20,7 +20,7 @@ import SignOut from '../../components/SignOut';
 import actions from './store/actions';
 
 // config
-import firebaseConfig from '../../../secret/firebaseConfig';
+import firebaseConfig from '../../secret/firebaseConfig';
 
 const DESCRIPTION = {
   title: 'Firebase Chat',
