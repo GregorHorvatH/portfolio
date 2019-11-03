@@ -1,7 +1,7 @@
 var FtpDeploy = require("ftp-deploy");
 var ftpDeploy = new FtpDeploy();
 
-var secret = require("./secret.js");
+var secret = require("../secret/deployConfig");
 
 var config = {
   user: secret.user,
@@ -42,12 +42,11 @@ ftpDeploy.deploy(config, function (err, res) {
 
 
 // ************************
-// secret.js
+// ../secret/deployConfig.js
 // ************************
 
 // module.exports = {
 //   user: "user",
-//   // Password optional, prompted if none given
 //   password: "password",
 //   host: "host",
 // };

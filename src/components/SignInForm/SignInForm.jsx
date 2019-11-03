@@ -6,11 +6,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { faSignInAlt, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import classnames from 'classnames';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+// actions
+import actions from '../../pages/Chat/store/actions';
 
 // styles
 import styles from '../Login/Login.module.scss';
 
-const SignInForm = ({ onSubmit, onChangeForm, formsOrder, provider }) => {
+// helpers
+import helpers from '../../helpers';
+const { getFormIndex } = helpers;
+
+const SignInForm = ({ onChangeForm, forms, actions, onSubmit }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -21,7 +30,8 @@ const SignInForm = ({ onSubmit, onChangeForm, formsOrder, provider }) => {
       noValidate
       onSubmit={(e) => {
         e.preventDefault();
-        onSubmit(provider.emailAndPassword, { email, password });
+
+        onSubmit('emailAndPassword');
       }}
     >
       <h3> Sign in</h3>
@@ -29,14 +39,14 @@ const SignInForm = ({ onSubmit, onChangeForm, formsOrder, provider }) => {
         <Button
           className={classnames("btn", styles.facebookBtn, styles.socialBtn)}
           type="button"
-          onClick={() => onSubmit(provider.facebook)}
+          onClick={() => onSubmit('facebook')}
         >
           <span><FontAwesomeIcon icon={faFacebookF} /> Sign in with Facebook</span>
         </Button>
         <Button
           className={classnames("btn", styles.googleBtn, styles.socialBtn)}
           type="button"
-          onClick={() => onSubmit(provider.google)}
+          onClick={() => onSubmit('google')}
         >
           <span><FontAwesomeIcon icon={faGoogle} /> Sign in with Google</span>
         </Button>
@@ -70,17 +80,17 @@ const SignInForm = ({ onSubmit, onChangeForm, formsOrder, provider }) => {
       </Button>
       <span
         className={styles.link}
-        onClick={() => onChangeForm(formsOrder.resetPasswordForm)}
+        onClick={() => onChangeForm(getFormIndex(forms, 'resetPasswordForm'))}
       >
         Forgot password?
-        </span>
+      </span>
 
       <hr className={styles.delimiter} />
 
       <Button
         className="btn btn-primary btn-block"
         type="button"
-        onClick={() => onChangeForm(formsOrder.signUpForm)}
+        onClick={() => onChangeForm(getFormIndex(forms, 'signUpForm'))}
       >
         <span><FontAwesomeIcon icon={faUserPlus} /> Sign up New Account</span>
       </Button>
@@ -88,4 +98,12 @@ const SignInForm = ({ onSubmit, onChangeForm, formsOrder, provider }) => {
   );
 };
 
-export default SignInForm;
+const mapState = ({ chat }) => ({
+  chat,
+});
+
+const mapDispatch = (dispatch) => ({
+  actions: bindActionCreators(actions, dispatch),
+});
+
+export default connect(mapState, mapDispatch)(SignInForm);

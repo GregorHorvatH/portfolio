@@ -8,7 +8,11 @@ import { faUserPlus, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 // styles
 import styles from '../Login/Login.module.scss';
 
-const SignUpForm = ({ onSubmit, onChangeForm, formsOrder, provider }) => {
+// helpers
+import helpers from '../../helpers';
+const { getFormIndex } = helpers;
+
+const SignUpForm = ({ onChangeForm, forms, onSubmit }) => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -21,7 +25,8 @@ const SignUpForm = ({ onSubmit, onChangeForm, formsOrder, provider }) => {
       noValidate
       onSubmit={(e) => {
         e.preventDefault();
-        onSubmit(provider.createEmailAndPassword, { fullName, email, password });
+
+        onSubmit('createEmailAndPassword');
       }}
     >
       <Form.Control
@@ -61,7 +66,7 @@ const SignUpForm = ({ onSubmit, onChangeForm, formsOrder, provider }) => {
       <Button className="btn btn-primary btn-block" type="submit">
         <span><FontAwesomeIcon icon={faUserPlus} /> Sign up</span>
       </Button>
-      <span className={styles.link} onClick={() => onChangeForm(formsOrder.signInForm)}>
+      <span className={styles.link} onClick={() => onChangeForm(getFormIndex(forms, 'signInForm'))}>
         <FontAwesomeIcon icon={faAngleLeft} /> Back
       </span>
     </Form>

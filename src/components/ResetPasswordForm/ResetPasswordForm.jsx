@@ -8,7 +8,11 @@ import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 // styles
 import styles from '../Login/Login.module.scss';
 
-const ResetPasswordForm = ({ onSubmit, onChangeForm, formsOrder, provider }) => {
+// helpers
+import helpers from '../../helpers';
+const { getFormIndex } = helpers;
+
+const ResetPasswordForm = ({ onSubmit, onChangeForm, forms }) => {
   const [email, setEmail] = useState('');
 
   return (
@@ -18,7 +22,8 @@ const ResetPasswordForm = ({ onSubmit, onChangeForm, formsOrder, provider }) => 
       noValidate
       onSubmit={(e) => {
         e.preventDefault();
-        onSubmit(provider.resetPassword, { email });
+
+        onSubmit('resetPassword');
       }}
     >
       <Form.Control type="email"
@@ -32,7 +37,7 @@ const ResetPasswordForm = ({ onSubmit, onChangeForm, formsOrder, provider }) => 
       <Button type="submit" className="btn btn-primary btn-block">
         Reset Password
       </Button>
-      <span className={styles.link} onClick={() => onChangeForm(formsOrder.signInForm)}>
+      <span className={styles.link} onClick={() => onChangeForm(getFormIndex(forms, 'signInForm'))}>
         <FontAwesomeIcon icon={faAngleLeft} /> Back
       </span>
     </Form>
